@@ -16,7 +16,7 @@ router.get('/', (req, res) => {
     if(req.user == null){
         const errors = [];
         res.render('layout.ejs', {
-            title : 'Sign Up - Squirrel',
+            title : 'Sign Up',
             body : ['signup'],
             user : null,
             errors : errors
@@ -64,7 +64,7 @@ router.post('/', async (req, res) => {
         // if there are errors, redirect to sign up but with form informations
         if(errors.length > 0){
             res.render('layout.ejs', {
-                title : 'Sign Up - Squirrel',
+                title : 'Sign Up',
                 body : ['signup'],
                 user : null,
                 errors : errors,
